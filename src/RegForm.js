@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './RegForm.css';
+
 class RegForm extends Component {
   constructor(props){
   	super(props);
@@ -21,6 +23,8 @@ class RegForm extends Component {
   	//view of values
   	this.setState({email: event.target.value});
   }
+
+
   render() {
     return (
         <form onSubmit={this.handleSubmit}>
@@ -29,8 +33,9 @@ class RegForm extends Component {
         		placeholder="E-mail"
         		value={this.state.email}
         		onChange={this.handleEmailChange}
+            className='emailField'
         		/>
-        	<button>
+        	<button className="submitBtn">
         		Save
         	</button>
         </form>
